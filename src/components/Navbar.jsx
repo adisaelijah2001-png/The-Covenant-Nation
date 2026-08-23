@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import { FiMenu as Menu, FiX as X } from 'react-icons/fi'
 
 const logo = new URL('../assets/Church Logo.png', import.meta.url).href
@@ -17,29 +17,34 @@ const navItems = [
 
 export default function Navbar(){
   const [open, setOpen] = useState(false)
+  const location = useLocation()
+  const aboutActive = ['/about','/services','/discipleship'].includes(location.pathname)
 
   return (
     <header className="site-header">
       <div className="container nav-row">
-        <Link to="/" className="brand" style={{display:'flex',alignItems:'center',gap:'0.75rem'}}>
-          <img src={logo} alt="Church Logo" style={{height:44,width:'auto',display:'block'}} />
-          <span>
-            The Covenant Nation <span className="branch">Jesutedo</span>
-          </span>
+        <Link to="/" className="brand" onClick={() => setOpen(false)}>
+          <img src={logo} alt="Church Logo" />
         </Link>
 
         <nav className={`nav ${open ? 'open' : ''}`} aria-label="Main navigation">
-          {navItems.map(item => (
-            <NavLink
-              key={item.to}
-              to={item.to}
-              onClick={() => setOpen(false)}
-              className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
-            >
-              {item.label}
-            </NavLink>
-          ))}
-          <Link to="/plan-visit" className="btn primary" onClick={() => setOpen(false)}>Plan Your Visit</Link>
+          <NavLink to="/" onClick={() => setOpen(false)} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Home</NavLink>
+
+          <div className={`dropdown ${aboutActive ? 'active' : ''}`}> 
+            <div className="dropdown-toggle" onClick={() => setOpen(!open)}>
+              <NavLink to="/about" onClick={() => setOpen(false)} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>About</NavLink>
+              <span className="caret">▾</span>
+            </div>
+            <div className="dropdown-menu">
+              <NavLink to="/services" onClick={() => setOpen(false)} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Services</NavLink>
+              <NavLink to="/discipleship" onClick={() => setOpen(false)} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Discipleship</NavLink>
+            </div>
+          </div>
+
+          <NavLink to="/sermons" onClick={() => setOpen(false)} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Sermons</NavLink>
+          <NavLink to="/units" onClick={() => setOpen(false)} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Church Unit</NavLink>
+          <NavLink to="/events" onClick={() => setOpen(false)} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Events</NavLink>
+          <NavLink to="/contact" onClick={() => setOpen(false)} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Contact</NavLink>
         </nav>
 
         <button className="mobile-toggle" onClick={() => setOpen(!open)} aria-label="Toggle menu">

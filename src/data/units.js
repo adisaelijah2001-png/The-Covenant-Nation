@@ -8,5 +8,10 @@ export const units = [
   { id:2, name: "Children's Church", image: children, description: 'Editable description for Children\'s Church.' },
   { id:3, name: 'Media Unit', image: media, description: 'Editable description for Media Unit.' },
   { id:4, name: 'Choir / Worship', image: choir, description: 'Editable description for Choir.' },
+  { id:5, name: 'Choir / Worship', image: choir, description: 'Editable description for Choir.' },
+  { id:6, name: 'Choir / Worship', image: choir, description: 'Editable description for Choir.' },
+  { id:7, name: 'Choir / Worship', image: choir, description: 'Editable description for Choir.' },
+  { id:8, name: 'Choir / Worship', image: choir, description: 'Editable description for Choir.' },
+  { id:9, name: 'Choir / Worship', image: choir, description: 'Editable description for Choir.' },
   // Add more units as needed by editing this file
 ]
