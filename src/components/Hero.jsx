@@ -1,6 +1,6 @@
-// Hero uses the congregation worship image at src/assets/church/worship-hero.jpg
-// Replace that file with your real worship photo when ready.
-const heroImage = new URL('../assets/church/worship-hero.jpg', import.meta.url).href
+// Hero uses the main hero image at src/assets/main.png
+// Replace that file with your preferred hero photo when ready.
+const heroImage = new URL('../assets/main.png', import.meta.url).href
 
 export default function Hero(){
   return (

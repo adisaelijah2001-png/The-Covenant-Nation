@@ -15,7 +15,7 @@ body{font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Ro
 
 .site-header{background:var(--primary);position:sticky;top:0;z-index:40;box-shadow:0 4px 18px rgba(2,6,23,0.25)}
 .nav-row{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 0}
-.brand{font-weight:700;color:var(--white);text-decoration:none}
+.brand{font-weight:700;color:var(--white);text-decoration:none;display:inline-flex;align-items:center}
 .brand .branch{display:block;font-weight:500;font-size:0.85rem;color:rgba(255,255,255,0.85)}
 
 .nav{display:flex;gap:1rem;align-items:center}
@@ -31,6 +31,9 @@ body{font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Ro
 .btn:focus{outline:none;box-shadow:0 0 0 4px rgba(201,162,39,0.14)}
 
 .mobile-toggle{display:none;background:none;border:0;color:var(--white)}
+
+/* Ensure logo image renders with transparent background and aligns with text */
+.brand img{background:transparent;display:block}
 
 .hero{background-size:cover;background-position:center;color:var(--white);padding:6rem 0;position:relative}
 .hero-overlay{background:linear-gradient(rgba(11,31,58,0.65), rgba(11,31,58,0.65));padding:4rem 0}
@@ -73,18 +76,32 @@ body{font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Ro
 .cols-3{grid-template-columns:repeat(3,1fr)}
 .cols-4{grid-template-columns:repeat(4,1fr)}
 
-.hero-full{min-height:100vh;background-position:center center;background-size:cover;display:flex;align-items:center}
+/* .hero-full{min-height:calc(100vh - 100vh);background-position:center center;background-size:cover;display:flex;align-items:center;width:100%;margin-left:calc(50% - 50%);background-repeat:no-repeat} */
 
-.two-cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.two-card{padding:1.25rem}
-.service-location-section .time-row{display:flex;gap:0.75rem;align-items:center;margin:0.5rem 0}
-.service-location-section .when{color:var(--secondary);font-weight:700}
-.location-block .loc-line{display:flex;gap:0.75rem;align-items:center;margin-bottom:0.5rem}
+/* Hero content centering and typography */
+.hero-overlay{background:linear-gradient(rgba(11,31,58,0.62), rgba(11,31,58,0.62));min-height: 100vh;display:flex;align-items:center;}
+.hero-content{width:100%;text-align:center;padding:4rem 1rem}
+.hero h1{font-size:clamp(2.25rem,6vw,4rem);margin-bottom:0.5rem;line-height:1.05}
+.hero p{max-width:64ch;margin:0.5rem auto 1rem}
+.hero .lead{font-size:1.125rem;opacity:0.94}
+.hero .muted.small{opacity:0.85;margin-bottom:1rem}
+.hero-actions{display:flex;gap:1rem;justify-content:center;margin-top:1rem}
+.hero-actions a{margin:0}
+
+.two-cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:stretch}
+.two-card{padding:2rem;border-radius:12px;background:linear-gradient(180deg,var(--cream),#fff);box-shadow:0 12px 30px #b5bbd80f;text-align:center}
+.service-location-section .time-row{display:flex;gap:0.75rem;align-items:center;justify-content:center;margin:0.75rem 0}
+.service-location-section .when{color:var(--secondary);font-weight:700;font-size:1.125rem}
+.location-block .loc-line{display:flex;gap:0.75rem;align-items:center;justify-content:center;margin-bottom:0.5rem}
+.location-block .muted{margin-bottom:1rem}
+.location-block .btn{display:inline-block;padding:0.9rem 2rem;border-radius:12px;font-weight:700}
+.location-block .btn.blue{background:linear-gradient(90deg,var(--secondary),#2458a6);color:var(--white)}
 
 .leader-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:1rem;align-items:start}
 .leader-card{display:flex;gap:1rem;background:var(--white);padding:1rem;border-radius:10px;align-items:center}
-.leader-card img{width:160px;height:160px;object-fit:cover;border-radius:8px}
-.leader-card.featured{grid-column:1 / 4;background:linear-gradient(90deg, rgba(255,255,255,0.98), rgba(255,255,255,0.96));}
+.leader-card img{width:clamp(140px,18vw,220px);height:clamp(140px,18vw,220px);object-fit:cover;border-radius:8px}
+.leader-card.featured{grid-column:1 / 4;background:linear-gradient(90deg, rgba(255,255,255,0.98), rgba(255,255,255,0.96));padding:2rem;display:flex;flex-direction:column;align-items:center;text-align:center}
+.leader-card.featured img{width:clamp(220px,28vw,360px);height:clamp(220px,28vw,360px);border-radius:12px;margin:0 0 1rem}
 .leader-card .role{color:var(--secondary)}
 
 .unit-card .unit-image-wrap{height:160px;overflow:hidden;border-radius:8px}

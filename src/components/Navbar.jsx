@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { FiMenu as Menu, FiX as X } from 'react-icons/fi'
 
+const logo = new URL('../assets/Church Logo.png', import.meta.url).href
+
 const navItems = [
   { to: '/', label: 'Home' },
   { to: '/about', label: 'About' },
@@ -19,7 +21,12 @@ export default function Navbar(){
   return (
     <header className="site-header">
       <div className="container nav-row">
-        <Link to="/" className="brand">The Covenant Nation <span className="branch">Jesutedo</span></Link>
+        <Link to="/" className="brand" style={{display:'flex',alignItems:'center',gap:'0.75rem'}}>
+          <img src={logo} alt="Church Logo" style={{height:44,width:'auto',display:'block'}} />
+          <span>
+            The Covenant Nation <span className="branch">Jesutedo</span>
+          </span>
+        </Link>
 
         <nav className={`nav ${open ? 'open' : ''}`} aria-label="Main navigation">
           {navItems.map(item => (

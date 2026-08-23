@@ -9,7 +9,7 @@ export default function Contact(){
       <div className="grid cols-2 contact-grid">
         <div>
           <h3>The Covenant Nation, Jesutedo</h3>
-          <p>In front of Lagos Business School, Sangotedo, Lagos State, Nigeria</p>
+          <p>KM 22, Lekki-Epe Expressway, Opposite Lagos Business School, Alasia, Lagos</p>
           <p>Service Times: Sunday 7:30 AM &amp; 10:00 AM</p>
         </div>
         <ContactForm />
