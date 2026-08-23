@@ -10,6 +10,7 @@ import Sermons from './pages/Sermons'
 import Events from './pages/Events'
 import Contact from './pages/Contact'
 import PlanVisit from './pages/PlanVisit'
+import Units from './pages/Units'
 
 function App(){
   return (
@@ -23,6 +24,7 @@ function App(){
           <Route path="/services" element={<Services />} />
           <Route path="/discipleship" element={<Discipleship />} />
           <Route path="/sermons" element={<Sermons />} />
+          <Route path="/units" element={<Units />} />
           <Route path="/events" element={<Events />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/plan-visit" element={<PlanVisit />} />

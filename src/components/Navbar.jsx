@@ -5,6 +5,7 @@ import { FiMenu as Menu, FiX as X } from 'react-icons/fi'
 const navItems = [
   { to: '/', label: 'Home' },
   { to: '/about', label: 'About' },
+  { to: '/units', label: 'Church Units' },
   { to: '/services', label: 'Services' },
   { to: '/discipleship', label: 'Discipleship' },
   { to: '/sermons', label: 'Sermons' },
