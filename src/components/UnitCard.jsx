@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function UnitCard({unit}){
   return (
     <article className="unit-card card">
@@ -8,7 +10,7 @@ export default function UnitCard({unit}){
         <h4>{unit.name}</h4>
         <div className="accent-line" />
         <p>{unit.description}</p>
-        <a className="btn" href="#">Learn More</a>
+        <Link className="btn" to={`/units/${unit.id}`}>Learn More</Link>
       </div>
     </article>
   )

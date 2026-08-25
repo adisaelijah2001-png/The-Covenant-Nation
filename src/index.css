@@ -15,11 +15,11 @@ body{font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Ro
 
 .site-header{background:var(--primary);position:sticky;top:0;z-index:40;box-shadow:0 4px 18px rgba(2,6,23,0.25)}
 .nav-row{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 0}
-.brand{font-weight:700;color:var(--white);text-decoration:none;display:inline-flex;align-items:center}
+.brand{font-weight:900;color:var(--white);text-decoration:none;display:inline-flex;align-items:center}
 .brand .branch{display:block;font-weight:500;font-size:0.85rem;color:rgba(255,255,255,0.85)}
 
 .nav{display:flex;gap:1rem;align-items:center}
-.nav-link{color:rgba(255,255,255,0.92);text-decoration:none;padding:0.5rem}
+.nav-link{color:rgba(255,255,255,0.92);text-decoration:none;padding:0.5rem;font-size:1.05rem;font-weight:600}
 .nav-link.active{color:var(--accent)}
 
 /* Dropdown styles for About menu */
@@ -36,6 +36,7 @@ body{font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Ro
 	.dropdown-menu{position:static;display:none;padding-left:0;box-shadow:none;background:transparent}
 	.nav.open .dropdown-menu{display:flex}
 	.dropdown-menu .nav-link{padding:0.6rem 0;color:var(--white)}
+	.nav-link{font-size:1rem;font-weight:600}
 }
 .btn{display:inline-flex;align-items:center;gap:0.6rem;padding:0.65rem 1.1rem;border-radius:10px;border:0;font-weight:600;cursor:pointer;transition:transform 180ms ease,box-shadow 180ms ease,opacity 180ms ease;text-decoration:none;box-shadow:0 6px 18px rgba(2,6,23,0.08)}
 .btn.primary{background:linear-gradient(90deg,var(--accent),#b89220);color:var(--primary)}

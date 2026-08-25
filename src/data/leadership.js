@@ -5,5 +5,5 @@ const assistant = new URL('../assets/leadership/assistant-campus-pastor.jpg', im
 export const leadership = [
   { id: 1, role: 'Senior Pastor', name: 'Pastor Poju', image: poju, bio: 'Senior Pastor of The Covenant Nation' },
   { id: 2, role: 'Campus Pastor', name: 'Pastor Yetunde', image: yetunde, bio: 'Campus Pastor, overseeing the Sangotedo campus.' },
-  { id: 3, role: 'Assistant Campus Pastor', name: 'Assistant Campus Pastor (Placeholder)', image: tola, bio: 'Assistant Campus pastor' },
+  { id: 3, role: 'Assistant Campus Pastor', name: 'Assistant Campus Pastor (Placeholder)', image: assistant, bio: 'Assistant Campus pastor' },
 ]

@@ -11,6 +11,8 @@ import Events from './pages/Events'
 import Contact from './pages/Contact'
 import PlanVisit from './pages/PlanVisit'
 import Units from './pages/Units'
+import UnitDetail from './pages/UnitDetail'
+import JoinUnit from './pages/JoinUnit'
 
 function App(){
   return (
@@ -25,6 +27,8 @@ function App(){
           <Route path="/discipleship" element={<Discipleship />} />
           <Route path="/sermons" element={<Sermons />} />
           <Route path="/units" element={<Units />} />
+          <Route path="/units/join" element={<JoinUnit />} />
+          <Route path="/units/:id" element={<UnitDetail />} />
           <Route path="/events" element={<Events />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/plan-visit" element={<PlanVisit />} />
