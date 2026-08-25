@@ -3,39 +3,64 @@ import CTASection from '../components/CTASection'
 import LeaderCard from '../components/LeaderCard'
 import { leadership } from '../data/leadership'
 
+const imgStory = new URL('../assets/main.png', import.meta.url).href
+const imgValues = new URL('../assets/image.png', import.meta.url).href
+const imgVision = new URL('../assets/hero.png', import.meta.url).href
+const imgMission = new URL('../assets/project 58.jpeg', import.meta.url).href
+const imgJourney = new URL('../assets/units/levite-protocol.jpg', import.meta.url).href
+
 export default function About(){
   return (
     <main className="container page about-page">
       <SectionTitle title="About Us" subtitle="A welcoming community of faith" />
 
-      <section>
-        <h3>Our Story</h3>
-        <p className="lead">The Covenant Nation, Jesutedo is a community where people can worship God, grow spiritually, connect with others, and serve. This section contains editable placeholder copy — replace with your church history and story.</p>
+      <section className="about-split">
+        <div className="media"><img src={imgStory} alt="Church community" /></div>
+        <div className="text">
+          <h3>Our Story</h3>
+          <p className="lead">The Covenant Nation, Jesutedo is a community where people can worship God, grow spiritually, connect with others, and serve. This section contains editable placeholder copy — replace with your church history and story.</p>
+        </div>
       </section>
 
-      <section>
-        <h3>Our Core Values</h3>
-        <ul>
-          <li>Worship — pursuing a lifestyle of reverence and praise.</li>
-          <li>Discipleship — intentional spiritual growth and formation.</li>
-          <li>Community — deep, supportive relationships.</li>
-          <li>Service — using gifts to bless others and the city.</li>
-        </ul>
+      <section className="about-split reverse">
+        <div className="media"><img src={imgValues} alt="Core values" /></div>
+        <div className="text">
+          <h3>Our Core Values</h3>
+          <div className="about-values">
+            <div className="value-card"><strong>Worship</strong><p>Seeking God's presence through excellence in praise and reverence.</p></div>
+            <div className="value-card"><strong>Discipleship</strong><p>Intentional spiritual formation and growth for every believer.</p></div>
+            <div className="value-card"><strong>Community</strong><p>Authentic relationships and compassionate care for one another.</p></div>
+          </div>
+        </div>
       </section>
 
-      <section>
-        <h3>Our Vision</h3>
-        <p>To see lives transformed by the gospel and communities renewed through faithful service and compassionate outreach.</p>
+      <section className="about-split">
+        <div className="media"><img src={imgVision} alt="Our vision" /></div>
+        <div className="text">
+          <h3>Our Vision</h3>
+          <p>To see lives transformed by the gospel and communities renewed through faithful service and compassionate outreach.</p>
+        </div>
       </section>
 
-      <section>
-        <h3>Our Mission</h3>
-        <p>Love God, love people, and make disciples — equipping believers to serve and lead in their spheres.</p>
+      <section className="about-split reverse">
+        <div className="media"><img src={imgMission} alt="Our mission" /></div>
+        <div className="text">
+          <h3>Our Mission</h3>
+          <p>Love God, love people, and make disciples — equipping believers to serve and lead in their spheres.</p>
+        </div>
       </section>
 
-      <section>
-        <h3>The Journey So Far</h3>
-        <p>Beginning → Growth → Milestones → Today. This timeline is a placeholder — replace with specific milestones and dates to tell your church's story.</p>
+      <section className="about-split">
+        <div className="media"><img src={imgJourney} alt="The journey" /></div>
+        <div className="text">
+          <h3>The Journey So Far</h3>
+          <div className="timeline">
+            <div className="milestone"><div className="dot"/> <div className="milestone-body"><strong>Beginning</strong><p>Foundational years and first gatherings (placeholder).</p></div></div>
+            <div className="milestone"><div className="dot"/> <div className="milestone-body"><strong>Growth</strong><p>Growing community, new ministries, and outreach (placeholder).</p></div></div>
+            <div className="milestone"><div className="dot"/> <div className="milestone-body"><strong>Milestones</strong><p>Major events and milestones that shaped our identity (placeholder).</p></div></div>
+            <div className="milestone"><div className="dot"/> <div className="milestone-body"><strong>Today</strong><p>Where we are now and our focus for the future (placeholder).</p></div></div>
+          </div>
+        </div>
       </section>
 
       <section style={{marginTop:20}}>
