@@ -7,27 +7,28 @@
 	--text: #111827;
 	--muted: #6b7280;
 	--container: 1100px;
+	--nav-bg: #F4F3F1; /* light neutral for navbar */
 }
 
 *{box-sizing:border-box}
-body{font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color:var(--text); line-height:1.6; margin:0;background:var(--cream)}
+body{font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color:var(--text); line-height:1.7; margin:0;background:var(--cream)}
 .container{max-width:var(--container);margin:0 auto;padding:2rem}
 
-.site-header{background:var(--primary);position:sticky;top:0;z-index:40;box-shadow:0 4px 18px rgba(2,6,23,0.25)}
+.site-header{background:var(--nav-bg);position:sticky;top:0;z-index:40;box-shadow:0 6px 18px rgba(2,6,23,0.06);border-bottom:1px solid rgba(11,31,58,0.04)}
 .nav-row{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 0}
-.brand{font-weight:900;color:var(--white);text-decoration:none;display:inline-flex;align-items:center}
-.brand .branch{display:block;font-weight:500;font-size:0.85rem;color:rgba(255,255,255,0.85)}
+.brand{font-weight:900;color:var(--primary);text-decoration:none;display:inline-flex;align-items:center}
+.brand .branch{display:block;font-weight:500;font-size:0.85rem;color:rgba(11,31,58,0.65)}
 
 .nav{display:flex;gap:1rem;align-items:center}
-.nav-link{color:rgba(255,255,255,0.92);text-decoration:none;padding:0.5rem;font-size:1.05rem;font-weight:600}
+.nav-link{color:var(--primary);text-decoration:none;padding:0.5rem;font-size:1.05rem;font-weight:600}
 .nav-link.active{color:var(--accent)}
 
 /* Dropdown styles for About menu */
 .dropdown{position:relative;display:flex;align-items:center}
 .dropdown-toggle{display:flex;align-items:center;gap:0.35rem;cursor:pointer}
 .dropdown .caret{font-size:0.7rem;opacity:0.9}
-.dropdown-menu{position:absolute;top:100%;left:0;min-width:200px;background:var(--primary);border-radius:8px;padding:0.5rem;display:none;flex-direction:column;box-shadow:0 8px 24px rgba(2,6,23,0.18)}
-.dropdown-menu .nav-link{display:block;padding:0.5rem 0.75rem;color:rgba(255,255,255,0.95)}
+.dropdown-menu{position:absolute;top:100%;left:0;min-width:220px;background:var(--white);border-radius:8px;padding:0.5rem;display:none;flex-direction:column;box-shadow:0 8px 24px rgba(2,6,23,0.08)}
+.dropdown-menu .nav-link{display:block;padding:0.5rem 0.75rem;color:var(--primary)}
 .dropdown:hover .dropdown-menu{display:flex}
 
 /* Mobile: when nav is open, ensure dropdown items are visible inline */
@@ -35,7 +36,7 @@ body{font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Ro
 	.nav{flex-direction:column;padding:1rem 0}
 	.dropdown-menu{position:static;display:none;padding-left:0;box-shadow:none;background:transparent}
 	.nav.open .dropdown-menu{display:flex}
-	.dropdown-menu .nav-link{padding:0.6rem 0;color:var(--white)}
+	.dropdown-menu .nav-link{padding:0.6rem 0;color:var(--primary)}
 	.nav-link{font-size:1rem;font-weight:600}
 }
 .btn{display:inline-flex;align-items:center;gap:0.6rem;padding:0.65rem 1.1rem;border-radius:10px;border:0;font-weight:600;cursor:pointer;transition:transform 180ms ease,box-shadow 180ms ease,opacity 180ms ease;text-decoration:none;box-shadow:0 6px 18px rgba(2,6,23,0.08)}
@@ -50,7 +51,8 @@ body{font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Ro
 .mobile-toggle{display:none;background:none;border:0;color:var(--white)}
 
 /* Ensure logo image renders with transparent background and aligns with text */
-.brand img{background:transparent;display:block;height:56px;width:auto}
+.brand img{background:transparent;display:block;height:64px;width:auto}
+@media (max-width:900px){.brand img{height:56px}}
 @media (max-width:700px){.brand img{height:44px}}
 
 .hero{background-size:cover;background-position:center;color:var(--white);padding:6rem 0;position:relative}
@@ -154,7 +156,7 @@ body{font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Ro
 }
 @media (max-width:700px){
 	.cols-2,.cols-3{grid-template-columns:1fr}
-	.nav{position:fixed;top:64px;right:0;background:var(--primary);flex-direction:column;padding:1rem;border-left:1px solid rgba(255,255,255,0.04);transform:translateX(100%);transition:transform 200ms}
+	.nav{position:fixed;top:64px;right:0;background:var(--nav-bg);flex-direction:column;padding:1rem;border-left:1px solid rgba(11,31,58,0.04);transform:translateX(100%);transition:transform 200ms}
 	.nav.open{transform:translateX(0)}
 	.mobile-toggle{display:block}
 }
