@@ -23,8 +23,8 @@ export default function Navbar(){
   return (
     <header className="site-header">
       <div className="container nav-row">
-        <Link to="/" className="brand" onClick={() => setOpen(false)}>
-          <img src={logo} alt="Church Logo" />
+        <Link to="/" className="brand" onClick={() => setOpen(false)} aria-label="Go to home page">
+          <img src={logo} alt="Church Logo" className="brand-logo" />
         </Link>
 
         <nav className={`nav ${open ? 'open' : ''}`} aria-label="Main navigation">

@@ -4,6 +4,8 @@ function Card({children}){
   return <div className="card two-card">{children}</div>
 }
 
+const googleMapsUrl = 'https://www.google.com/maps/search/?api=1&query=The+Covenant+Nation+Jesutedo,+in+front+of+Lagos+Business+School,+Sangotedo,+Lagos+State,+Nigeria'
+
 export default function ServiceLocationSection(){
   return (
     <section className="container service-location-section">
@@ -24,7 +26,14 @@ export default function ServiceLocationSection(){
           <div className="location-block">
             <div className="loc-line"><FiMapPin /> <div>The Covenant Nation, Jesutedo</div></div>
             <div className="muted">In front of Lagos Business School<br/>Sangotedo, Lagos State, Nigeria</div>
-            <a className="btn blue" href="https://www.google.com/maps" target="_blank" rel="noreferrer">Get Directions</a>
+            <a
+              className="btn location-link"
+              href={googleMapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FiMapPin /> Get Directions
+            </a>
           </div>
         </Card>
       </div>

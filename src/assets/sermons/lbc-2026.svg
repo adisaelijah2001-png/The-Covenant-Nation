@@ -1,0 +1,19 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Lekki Believers Convention 2026</title>
+  <desc id="desc">Navy and gold abstract church conference artwork.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1">
+      <stop offset="0%" stop-color="#0B1F3A"/>
+      <stop offset="55%" stop-color="#173F7A"/>
+      <stop offset="100%" stop-color="#C9A227"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <circle cx="960" cy="120" r="130" fill="rgba(255,255,255,0.08)"/>
+  <circle cx="150" cy="580" r="160" fill="rgba(201,162,39,0.16)"/>
+  <path d="M0 500 Q300 420 600 500 T1200 500 V675 H0 Z" fill="rgba(255,255,255,0.08)"/>
+  <text x="600" y="290" text-anchor="middle" font-size="72" font-family="Arial, sans-serif" fill="#F7F3EA" font-weight="700">THY KINGDOM COME</text>
+  <text x="600" y="360" text-anchor="middle" font-size="34" font-family="Arial, sans-serif" fill="#F7F3EA" letter-spacing="5">LEKKI BELIEVERS CONVENTION 2026</text>
+  <rect x="420" y="420" width="360" height="80" rx="14" fill="rgba(247,243,234,0.14)" stroke="rgba(247,243,234,0.5)"/>
+  <text x="600" y="472" text-anchor="middle" font-size="26" font-family="Arial, sans-serif" fill="#F7F3EA" font-weight="700">AUGUST 24–29</text>
+</svg>

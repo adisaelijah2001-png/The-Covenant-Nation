@@ -1,32 +1,70 @@
-import { useState } from 'react'
-import SectionTitle from '../components/SectionTitle'
+import { useMemo, useState } from 'react'
 import SermonCard from '../components/SermonCard'
-import { sermons as initial } from '../data/sermons'
+import { sermonCategories, sermons, sortSermonsByNewest } from '../data/sermons'
 
 export default function Sermons(){
   const [query, setQuery] = useState('')
   const [category, setCategory] = useState('All')
 
-  const categories = ['All', ...Array.from(new Set(initial.map(s => s.category)))]
+  const orderedSermons = useMemo(() => sortSermonsByNewest(sermons), [])
 
-  const filtered = initial.filter(s =>
-    (category === 'All' || s.category === category) &&
-    (s.title.toLowerCase().includes(query.toLowerCase()) || s.speaker.toLowerCase().includes(query.toLowerCase()))
-  )
+  const filtered = useMemo(() => {
+    const term = query.trim().toLowerCase()
+
+    return orderedSermons.filter(sermon => {
+      const matchesCategory = category === 'All' || sermon.category === category
+      const matchesQuery = !term || [
+        sermon.title,
+        sermon.speaker,
+        sermon.category,
+        sermon.type
+      ].some(value => value.toLowerCase().includes(term))
+
+      return matchesCategory && matchesQuery
+    })
+  }, [category, orderedSermons, query])
 
   return (
-    <main className="container page sermons-page">
-      <SectionTitle title="Sermons" subtitle="Search and filter messages" />
-      <div className="search-row">
-        <input placeholder="Search sermons" value={query} onChange={e => setQuery(e.target.value)} />
-        <select value={category} onChange={e => setCategory(e.target.value)}>
-          {categories.map(c => <option key={c} value={c}>{c}</option>)}
-        </select>
+    <main className="container sermons-library-page">
+      <header className="sermons-page-header">
+        <p className="sermons-kicker">Messages</p>
+        <h1>Sermons</h1>
+        <p className="sermons-subtitle">Listen, learn, and grow through messages from The Covenant Nation.</p>
+      </header>
+
+      <div className="sermon-toolbar">
+        <label className="sermon-search" aria-label="Search sermons">
+          <span className="search-label">Search</span>
+          <input
+            type="text"
+            value={query}
+            onChange={event => setQuery(event.target.value)}
+            placeholder="Search by title, speaker, or category"
+          />
+        </label>
+
+        <label className="sermon-filter" aria-label="Filter sermons by category">
+          <span className="filter-label">Category</span>
+          <select value={category} onChange={event => setCategory(event.target.value)}>
+            {sermonCategories.map(option => (
+              <option key={option} value={option}>{option}</option>
+            ))}
+          </select>
+        </label>
       </div>
 
-      <div className="grid cols-3">
-        {filtered.map(s => <SermonCard key={s.id} sermon={s} />)}
-      </div>
+      {filtered.length === 0 ? (
+        <div className="sermon-empty-state">
+          <h3>No sermons found.</h3>
+          <p>Try searching for another title, speaker, or category.</p>
+        </div>
+      ) : (
+        <div className="sermon-grid">
+          {filtered.map(sermon => (
+            <SermonCard key={sermon.id} sermon={sermon} />
+          ))}
+        </div>
+      )}
     </main>
   )
 }
