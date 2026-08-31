@@ -3,7 +3,7 @@ import CTASection from '../components/CTASection'
 import LeaderCard from '../components/LeaderCard'
 import { leadership } from '../data/leadership'
 
-const imgStory = new URL('../assets/main.png', import.meta.url).href
+const imgStory = new URL('../assets/Where we start.png', import.meta.url).href
 const imgValues = new URL('../assets/image.png', import.meta.url).href
 const imgVision = new URL('../assets/hero.png', import.meta.url).href
 const imgMission = new URL('../assets/project 58.jpeg', import.meta.url).href
@@ -15,10 +15,12 @@ export default function About(){
       <SectionTitle title="About Us" subtitle="A welcoming community of faith" />
 
       <section className="about-split">
-        <div className="media"><img src={imgStory} alt="Church community" /></div>
+        <div className="media"><img src={imgStory} alt="Where we start" /></div>
         <div className="text">
-          <h3>Our Story</h3>
-          <p className="lead">The Covenant Nation, Jesutedo is a community where people can worship God, grow spiritually, connect with others, and serve. This section contains editable placeholder copy — replace with your church history and story.</p>
+          <h3>Where We Start</h3>
+          <p className="lead">We started with a simple but powerful vision: to worship God, make disciples, and help people encounter the transforming love of Jesus in a real and practical way. From our beginning, this church has been shaped by prayer, faith, and a deep commitment to the Word of God.</p>
+          <p>What began as a humble gathering has grown into a vibrant community where people find hope, belonging, and direction. We are a church that celebrates where God started us, while trusting Him for where He is taking us next.</p>
+          <p>Today, we continue to build a place where families are strengthened, lives are renewed, and people are encouraged to grow in Christ, serve with purpose, and live with conviction. This is where we started, and this is where we are still moving forward together.</p>
         </div>
       </section>
 
