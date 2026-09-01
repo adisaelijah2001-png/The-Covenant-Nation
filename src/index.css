@@ -18,10 +18,10 @@ a{color:inherit}
 img{max-width:100%;display:block}
 .container{max-width:var(--container);margin:0 auto;padding:2rem 1.25rem}
 
-.site-header{background:transparent;position:sticky;top:0;z-index:40;box-shadow:none;border-bottom:1px solid transparent;transition:background-color 180ms ease, box-shadow 180ms ease, border-color 180ms ease}
-.site-header:hover{background:rgba(245,244,244,0.9);box-shadow:0 6px 18px rgba(2,6,23,0.06);border-bottom-color:rgba(11,31,58,0.04)}
-.nav-row{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 0}
-.brand{font-weight:900;color:var(--primary);text-decoration:none;display:inline-flex;align-items:center}
+.site-header{background:rgba(17, 24, 39, 0.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);position:sticky;top:0;z-index:40;box-shadow:0 10px 30px rgba(2,6,23,0.08);border-bottom:1px solid rgba(255,255,255,0.08);transition:background-color 180ms ease, box-shadow 180ms ease, border-color 180ms ease}
+.site-header:hover{background:rgba(17, 24, 39, 0.68);box-shadow:0 10px 30px rgba(2,6,23,0.12);border-bottom-color:rgba(255,255,255,0.12)}
+.nav-row{display:flex;align-items:center;justify-content:space-between;padding:0.85rem 0}
+.brand{font-weight:900;color:var(--primary);text-decoration:none;display:inline-flex;align-items:center;padding:0.25rem 0.5rem 0.25rem 0}
 .brand .branch{display:block;font-weight:500;font-size:0.85rem;color:rgba(11,31,58,0.65)}
 .brand-logo{background:transparent;display:block;height:100px;width:auto;object-fit:contain}
 
