@@ -20,10 +20,10 @@ img{max-width:100%;display:block}
 
 .site-header{background:rgba(17, 24, 39, 0.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);position:sticky;top:0;z-index:40;box-shadow:0 10px 30px rgba(2,6,23,0.08);border-bottom:1px solid rgba(255,255,255,0.08);transition:background-color 180ms ease, box-shadow 180ms ease, border-color 180ms ease}
 .site-header:hover{background:rgba(17, 24, 39, 0.68);box-shadow:0 10px 30px rgba(2,6,23,0.12);border-bottom-color:rgba(255,255,255,0.12)}
-.nav-row{display:flex;align-items:center;justify-content:space-between;padding:0.85rem 0}
+.nav-row{display:flex;align-items:center;justify-content:space-between;padding:0.35rem 0}
 .brand{font-weight:900;color:var(--primary);text-decoration:none;display:inline-flex;align-items:center;padding:0.25rem 0.5rem 0.25rem 0}
 .brand .branch{display:block;font-weight:500;font-size:0.85rem;color:rgba(11,31,58,0.65)}
-.brand-logo{background:transparent;display:block;height:100px;width:auto;object-fit:contain}
+.brand-logo{background:transparent;display:block;height:64px;width:auto;object-fit:contain}
 
 .nav{display:flex;gap:1rem;align-items:center}
 .nav-link{color:var(--primary);text-decoration:none;padding:0.5rem;font-size:1.05rem;font-weight:600}
@@ -55,12 +55,12 @@ img{max-width:100%;display:block}
 
 .mobile-toggle{display:none;background:none;border:0;color:var(--primary);font-size:1.5rem}
 
-@media (max-width:900px){.brand-logo{height:88px}}
-@media (max-width:700px){.brand-logo{height:72px}}
+@media (max-width:900px){.brand-logo{height:56px}}
+@media (max-width:700px){.brand-logo{height:48px}}
 
-.hero{width:100%;min-height:100vh;background-size:cover;background-position:center;background-repeat:no-repeat;position:relative;color:var(--white)}
-.hero-overlay{background:linear-gradient(rgba(11,31,58,0.7), rgba(11,31,58,0.7));min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem 0}
-.hero-content{width:min(920px,100%);margin:0 auto;text-align:center;padding:4rem 1rem;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.hero{width:100%;min-height:100vh;background-size:cover;background-position:center;background-repeat:no-repeat;position:relative;color:var(--white);display:flex;align-items:center}
+.hero-overlay{width:min(920px,100%);margin:0 auto;background:linear-gradient(rgba(68, 86, 109, 0.78), rgba(11,31,58,0.78));display:flex;align-items:center;justify-content:center;padding:2rem 0}
+.hero-content{width:100%;margin:0 auto;text-align:center;padding:2rem 1rem;display:flex;flex-direction:column;align-items:center;justify-content:center}
 .hero .eyebrow{margin:0 0 0.5rem;color:#ebd58a;font-size:0.9rem;letter-spacing:0.24em;text-transform:uppercase;font-weight:700}
 .hero h1{font-size:clamp(2.3rem,5vw,4.3rem);line-height:1.08;margin:0.25rem 0 0.75rem;max-width:780px}
 .hero p{max-width:64ch;margin:0.5rem auto 1rem}
@@ -265,9 +265,12 @@ img{max-width:100%;display:block}
 @media (max-width:700px){
 	.cols-2,.cols-3,.cols-4{grid-template-columns:1fr}
 	.nav{position:fixed;top:64px;right:0;background:var(--nav-bg);flex-direction:column;padding:1rem;border-left:1px solid rgba(11,31,58,0.04);transform:translateX(100%);transition:transform 200ms;z-index:50}
+  .nav{position:fixed;top:52px;right:0;background:var(--nav-bg);flex-direction:column;padding:1rem;border-left:1px solid rgba(11,31,58,0.04);transform:translateX(100%);transition:transform 200ms;z-index:50}
 	.nav.open{transform:translateX(0)}
 	.mobile-toggle{display:block}
-	.hero-content{padding:3.5rem 1rem}
+  .hero-overlay{width:100%;padding:1.25rem 0}
+  .hero-content{padding:1.5rem 1rem;text-align:center}
+  .hero h1,.hero p,.hero .muted.small{max-width:34rem;text-align:center}
 	.location-link{max-width:100%}
 }
 @media (max-width:600px){
@@ -473,7 +476,7 @@ img{max-width:100%;display:block}
 /* Responsive Sermon Grid */
 @media (max-width:900px){
   .sermon-grid{
-    grid-template-columns:repeat(2, 1fr);
+    grid-template-columns:1fr;
   }
   .sermon-controls{
     flex-direction:column;
@@ -481,6 +484,23 @@ img{max-width:100%;display:block}
   .search-input,
   .category-select{
     width:100%;
+  }
+  .sermon-card{
+    text-align:center;
+  }
+  .sermon-card-content{
+    align-items:center;
+  }
+  .sermon-badge,
+  .sermon-download-btn{
+    align-self:center;
+  }
+  .sermon-title{
+    font-size:1rem;
+  }
+  .sermon-speaker,
+  .sermon-date{
+    font-size:0.85rem;
   }
 }
 
@@ -492,8 +512,10 @@ img{max-width:100%;display:block}
     padding:0;
   }
   .sermon-title{
-    font-size:1rem;
+    font-size:0.95rem;
   }
+  .sermon-card-content{padding:1rem}
+  .sermon-download-btn{margin:0.5rem 1rem 1rem;font-size:0.85rem}
   .sermon-image-wrapper{
     height:160px;
   }
