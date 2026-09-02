@@ -1,4 +1,3 @@
-import { FiMapPin, FiPhone, FiMessageSquare, FiMail, FiFacebook, FiInstagram } from 'react-icons/fi'
 import { FaFacebookF, FaInstagram } from 'react-icons/fa'
 import { FiMapPin as MapPin, FiPhone as Phone, FiMessageSquare as MessageCircle, FiMail as Mail, FiArrowRight } from 'react-icons/fi'
 import ContactForm from '../components/ContactForm'

@@ -4,17 +4,6 @@ import { FiMenu as Menu, FiX as X } from 'react-icons/fi'
 
 const logo = new URL('../assets/Church Logo.png', import.meta.url).href
 
-const navItems = [
-  { to: '/', label: 'Home' },
-  { to: '/about', label: 'About' },
-  { to: '/units', label: 'Church Units' },
-  { to: '/services', label: 'Services' },
-  { to: '/discipleship', label: 'Discipleship' },
-  { to: '/sermons', label: 'Sermons' },
-  { to: '/events', label: 'Events' },
-  { to: '/contact', label: 'Contact' }
-]
-
 export default function Navbar(){
   const [open, setOpen] = useState(false)
   const location = useLocation()

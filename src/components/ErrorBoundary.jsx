@@ -10,7 +10,7 @@ export default class ErrorBoundary extends Component {
     return { error }
   }
 
-  componentDidCatch(error, info){
+  componentDidCatch(){
     // Could send to logging service here
     // console.error('ErrorBoundary caught', error, info)
   }

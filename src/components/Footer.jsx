@@ -1,5 +1,3 @@
-import { FiMapPin as MapPin, FiCalendar as Calendar } from 'react-icons/fi'
-
 export default function Footer(){
   return (
     <footer className="site-footer">
