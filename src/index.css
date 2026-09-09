@@ -76,7 +76,7 @@ img{max-width:100%;display:block}
 @keyframes slideUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 
 .section-title{margin:0 auto 1.5rem;text-align:center}
-.section-title h2{margin:0 0 0.4rem;color:var(--primary);font-size:clamp(1.9rem,4vw,2.7rem)}
+.section-title h2{margin:0 0 0.4rem;color:var(--primary);font-size:clamp(1.8rem,4vw,2.7rem)}
 .section-title p{margin:0;color:var(--muted)}
 
 .intro, .discipleship, .leadership, .units-preview, .sermons, .events{padding:1rem 0}
