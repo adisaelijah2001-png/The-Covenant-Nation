@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { FiMenu as Menu, FiX as X } from 'react-icons/fi'
 
-const logo = new URL('../assets/Church Logo.png', import.meta.url).href
+const logo = new URL('../assets/logo again.png', import.meta.url).href
 
 export default function Navbar(){
   const [open, setOpen] = useState(false)
