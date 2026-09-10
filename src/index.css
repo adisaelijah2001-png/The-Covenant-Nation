@@ -23,7 +23,7 @@ img{max-width:100%;display:block}
 .nav-row{display:flex;align-items:center;justify-content:space-between;padding:0.35rem 0}
 .brand{font-weight:900;color:var(--primary);text-decoration:none;display:inline-flex;align-items:center;padding:0.25rem 0.5rem 0.25rem 0}
 .brand .branch{display:block;font-weight:500;font-size:0.85rem;color:rgba(11,31,58,0.65)}
-.brand-logo{background:transparent;display:block;height:64px;width:auto;object-fit:contain}
+.brand-logo{background:transparent;display:block;height:67px;width:auto;object-fit:contain}
 
 .nav{display:flex;gap:1rem;align-items:center}
 .nav-link{color:var(--primary);text-decoration:none;padding:0.5rem;font-size:1.05rem;font-weight:600}
@@ -55,8 +55,8 @@ img{max-width:100%;display:block}
 
 .mobile-toggle{display:none;background:none;border:0;color:var(--primary);font-size:1.5rem}
 
-@media (max-width:900px){.brand-logo{height:56px}}
-@media (max-width:700px){.brand-logo{height:48px}}
+@media (max-width:900px){.brand-logo{height:59px}}
+@media (max-width:700px){.brand-logo{height:51px}}
 
 .hero{width:100%;min-height:100vh;background-size:cover;background-position:center;background-repeat:no-repeat;position:relative;color:var(--white);display:flex;align-items:center}
 .hero-overlay{height: 90%;width:min(100%,100%);margin:0 auto;background:linear-gradient(rgba(68, 86, 109, 0.78), rgba(11,31,58,0.78));display:flex;align-items:center;justify-content:center;padding:2rem 0}
