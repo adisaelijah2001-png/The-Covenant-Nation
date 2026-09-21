@@ -49,7 +49,7 @@ img{max-width:100%;display:block}
 .btn.secondary{background:var(--secondary);color:var(--white)}
 .btn.blue{background:linear-gradient(90deg,var(--secondary),#2458a6);color:var(--white);box-shadow:0 8px 26px rgba(23,63,122,0.14)}
 .location-link{background:linear-gradient(90deg, var(--accent) 0%, #d8b745 100%);color:var(--primary);padding:1rem 1.75rem;width:100%;max-width:20rem;margin:0 auto;border-radius:14px;box-shadow:0 12px 28px rgba(201,162,39,0.25)}
-.btn:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(2,6,23,0.14)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 17px 40px rgba(2,6,23,0.14)}
 .btn:active{transform:translateY(-1px);opacity:0.96}
 .btn:focus{outline:none;box-shadow:0 0 0 4px rgba(201,162,39,0.14)}
 
@@ -106,7 +106,7 @@ img{max-width:100%;display:block}
 .service-location-section .service-times{display:grid;gap:0.75rem}
 .service-location-section .time-row{display:flex;gap:0.75rem;align-items:center;justify-content:center;margin:0.75rem 0;text-align:left}
 .service-location-section .time-row svg{color:var(--primary);font-size:1.1rem}
-.service-location-section .when{color:var(--secondary);font-weight:700;font-size:1.125rem}
+.service-location-section .when{color:var(--secondary);font-weight:700;font-size:1.127rem}
 .location-block{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:0.8rem}
 .location-block .loc-line{display:flex;gap:0.7rem;align-items:center;justify-content:center;font-weight:700;color:var(--primary)}
 .location-block .muted{margin:0;color:var(--muted)}
@@ -264,6 +264,8 @@ img{max-width:100%;display:block}
 }
 @media (max-width:700px){
 	.cols-2,.cols-3,.cols-4{grid-template-columns:1fr}
+  .nav-row{position:relative}
+  .brand{position:absolute;left:50%;transform:translateX(-50%)}
 	.nav{position:fixed;top:64px;right:0;background:var(--nav-bg);flex-direction:column;padding:1rem;border-left:1px solid rgba(11,31,58,0.04);transform:translateX(100%);transition:transform 200ms;z-index:50}
   .nav{position:fixed;top:52px;right:0;background:var(--nav-bg);flex-direction:column;padding:1rem;border-left:1px solid rgba(11,31,58,0.04);transform:translateX(100%);transition:transform 200ms;z-index:50}
 	.nav.open{transform:translateX(0)}
