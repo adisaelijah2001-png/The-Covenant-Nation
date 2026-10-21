@@ -1,23 +1,16 @@
-const levite = new URL('../assets/units/levite-protocol.jpg', import.meta.url).href
-const children = new URL('../assets/units/children-church.jpg', import.meta.url).href
-const media = new URL('../assets/units/media-unit.jpg', import.meta.url).href
-const choir = new URL('../assets/units/choir.jpg', import.meta.url).href
+const bible = new URL('../assets/Bible Dept.png', import.meta.url).href
+const camera = new URL('../assets/Camera Dept.png', import.meta.url).href
+const children = new URL('../assets/Children Dept.png', import.meta.url).href
+const choir = new URL('../assets/Choir Department.png', import.meta.url).href
+const drama = new URL('../assets/Drama Dept.png', import.meta.url).href
+const ushering = new URL('../assets/Ushering Department.png', import.meta.url).href
 
 export const units = [
-  { id:1, name: 'Levite Protocol', image: levite, description: 'Editable description for Levite Protocol.',
-    longDescription: 'The Levite Department serves with excellence in worship support and service. Members are trained in discipline, teamwork, and spiritual formation to support the house of God during services and events.',
-    purpose: 'To provide orderly, reverent, and excellent support for worship and church gatherings.',
-    mission: 'Equip members for faithful service, cultivate excellence in worship support, and foster spiritual growth among volunteers.',
-    activities: 'Service coordination, rehearsal support, ushering, stage support, and special event preparation.',
-    who: 'Individuals committed to disciplined service, team-oriented, and eager to serve in worship and support roles.'
-  },
-  { id:2, name: "Children's Church", image: children, description: 'Editable description for Children\'s Church.' },
-  { id:3, name: 'Media Unit', image: media, description: 'Editable description for Media Unit.' },
-  { id:4, name: 'Choir / Worship', image: choir, description: 'Editable description for Choir.' },
-  { id:5, name: 'Choir / Worship', image: choir, description: 'Editable description for Choir.' },
-  { id:6, name: 'Choir / Worship', image: choir, description: 'Editable description for Choir.' },
-  { id:7, name: 'Choir / Worship', image: choir, description: 'Editable description for Choir.' },
-  { id:8, name: 'Choir / Worship', image: choir, description: 'Editable description for Choir.' },
-  { id:9, name: 'Choir / Worship', image: choir, description: 'Editable description for Choir.' },
+  { id: 1, name: 'Bible Department', image: bible, description: 'Grow in the Word and help others build a strong foundation of faith.' },
+  { id: 2, name: 'Camera Department', image: camera, description: 'Capture and share church services and events through photography and video.' },
+  { id: 3, name: "Children's Church", image: children, description: 'Help children learn about God in a welcoming and engaging environment.' },
+  { id: 4, name: 'Choir / Worship', image: choir, description: 'Use music and worship to serve the church and lead the congregation.' },
+  { id: 5, name: 'Drama Department', image: drama, description: 'Share messages of faith through drama and creative performance.' },
+  { id: 6, name: 'Ushering Department', image: ushering, description: 'Welcome and assist members and guests during church services and events.' },
   // Add more units as needed by editing this file
 ]

@@ -23,7 +23,7 @@ export default function UnitDetail(){
 
   return (
     <main>
-      <section className="hero hero-full" style={{backgroundImage:`url('${unit.image}')`, minHeight:'60vh'}}>
+      <section className="hero hero-full" style={{backgroundImage:`url('${unit.image}')`, backgroundSize:'contain', backgroundPosition:'center', backgroundColor:'var(--primary)', minHeight:'60vh'}}>
         <div className="hero-overlay">
           <div className="container hero-content">
             <h1>{unit.name}</h1>
